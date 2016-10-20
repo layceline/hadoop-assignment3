@@ -1,0 +1,2 @@
+-- This query returns the proportion of names that are male and names that are female. It first displays the male proportion, then the female one
+select avg(case g when "m" then 1 else 0 end), avg(case g when "f" then 1 else 0 end) from prenoms_opt lateral view explode(gender) gender as g;
