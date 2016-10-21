@@ -10,10 +10,10 @@ hdfs dfs -cp /res/prenoms.csv prenoms/0000</pre></code>
 
 + Creating the table<code><pre>
 CREATE EXTERNAL TABLE prenoms(
-	prenom STRING,
-	gender ARRAY<String>,
-	origin ARRAY<String>,
-	version DOUBLE
+    	prenom STRING,
+	    gender ARRAY &lt;String &rt;,
+	    origin ARRAY &lt;String &rt;,
+	    version DOUBLE
 )
 ROW FORMAT DELIMITED
 COLLECTION ITEMS TERMINATED BY '\,'
@@ -21,10 +21,10 @@ FIELDS TERMINATED BY '\073' STORED AS TEXTILE LOCATION '/user/clay/prenoms';</pr
 
 + Creating the ORC table<code><pre>
 CREATE TABLE prenoms_opt(
-	prenom STRING,
-	gender ARRAY<String>,
-	origin ARRAY<String>,
-	version DOUBLE
+    	prenom STRING,
+	    gender ARRAY &lt;String&rt;,
+	    origin ARRAY &lt;String&rt;,
+	    version DOUBLE
 )
 ROW FORMAT DELIMITED
 STORED AS ORC;</pre></code>
